@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<title>vs_slavchev's cyberspace :O</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+<link rel="stylesheet" href="css/colors.css">
+<link rel="stylesheet" href="css/text.css">
+
+<body class="black-background">
+
+  <div class="black-background w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left w3-xxlarge"
+  style="width:250px;" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large w3-hide-large w3-right-align"
+      onclick="w3_close()">Close X</button>
+    <!-- <p class="w3-bar-item w3-large">>ls --w=1</p> -->
+    <div style="margin-top:78px">
+        <a onclick="openPage('blog')" href="#" class="w3-bar-item w3-button">blog</a>
+        <a onclick="openPage('projects')" href="#" class="w3-bar-item w3-button">projects</a> <!-- games, keyboards, simulations -->
+        <a onclick="openPage('places')" href="#" class="w3-bar-item w3-button">places</a>
+    </div>
+  </div>
+
+  <div class="w3-main" style="margin-left:250px">
+
+    <div class="lighter-background">
+      <button class="w3-button w3-large w3-hide-large"
+        onclick="w3_open()">&#9776;</button>
+      <div class="lighter-background w3-container">
+        <h1>>vs_slavchev's cyberspace :O</h1>
+      </div>
+    </div>
+
+    <div class="w3-container w3-xlarge">
+      <div id="page_container">
+
+          <div id="blog" style="display: block;">
+              <h1 class="w3-xxlarge">>The mystery of termite communication</h1>
+              <p>Until the 1960s scientists could not explian how termites manage to organise their activity to gather and pile up 
+                in one place all the wood pieces they find. Different theories tried to explain this like unaudible languages and pheromone trails.</p>
+          </div>
+
+          <div id="projects" style="display: none;">
+
+              <h1 class="w3-xxlarge">>Keyboard</h1>
+              <p>You can make a custom unique keyboard to fit especially your needs.</p>
+
+              <h1 class="w3-xxlarge">>Virtual Evil</h1>
+              <p>A cyberspace game made using LibGDX and Java 8. Fight against the AI overlord of a system gone rogue, navigate your way in barren 
+                artificial landscapes and try to comprehend where reality bleeds into virtuality.
+                 Made together with
+                  <a href="http://github.com/BozhidarHrusanov">Bozhidar Hrusanov</a>.
+                  We learned about dependency management, design patterns, unit testing and documenting a project.</p>
+
+              <h1 class="w3-xxlarge">>Invade yer space</h1>
+              <p>Java 2D space invaders game, but with a story twist. Captain Manol, a pirate captain, had his ship fleet sunken after a confrontation with the
+                invading aliens, but managed to get hold of one of theirs. Now his mastery of sailing leads him on a revenge to invade the aliens' space. </p>
+              <p> I wanted to experiment with user experience:
+                  animations, notifications and sounds. From a technical standpoint I had to reason about
+                  concurrent data structures and algorithmic complexity of object collision detection.</p>
+
+              <h1 class="w3-xxlarge">>Beyond the next dimension</h1>
+              <p>A 3D shooter. The sprites from Doom made it grim and gory, while the other ripped weapon images made it feel like a violent collage.
+                The simple geometry of the levels and doors added a good bit of amateurism. Building this game allowed me to apply
+                  knowledge in trigonometry and stereometry. Made with GM7 and Blender.</p>
+                  <ul>
+                    <li>9 levels</li>
+                    <li>4 weapons</li>
+                    <li>6 enemies</li>
+                    <li>2 bosses</li>
+                  </ul>
+              <img src="img/btnd.png" class="w3-round-large w3-mobile">
+              <p>add where to find</p>
+          </div>
+
+          <div id="places" style="display: none;">
+              <h1 class="w3-xxlarge">>Fountain in 2/28 Park in Taipei</h1>
+              <p>Placed next to a temple, the sprinklers move in tact to a music and lights colour the water in vivid hues.</p>
+          </div>
+
+      </div>
+    </div>
+      
+  </div>
+     
+</body>
+<script src="js/w3_open_close.js"></script>
+<script src="js/tab_open.js"></script>
+</html>
+
