@@ -6,3 +6,8 @@ html, body, h1, h2, h3, h4, h5, h6 {
     font-family: 'green-screen';
     src: url('../font/green-screen.ttf');
 }
+
+div.article > h1 {
+    margin-bottom: 0;
+}
+
