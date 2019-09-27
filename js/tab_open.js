@@ -7,3 +7,12 @@ function openPage(divID) {
 
     document.getElementById(divID).style.display = "block";
 }
+
+function open_blog_post(id) {
+    var post_content = document.getElementById(id);
+    if (post_content.className.indexOf("w3-show") == -1) {
+        post_content.className += " w3-show";
+    } else { 
+        post_content.className = post_content.className.replace(" w3-show", "");
+    }
+  }
