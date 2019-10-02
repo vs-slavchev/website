@@ -8,3 +8,7 @@
 	color: #00FF66;
 }
 
+.w3-button:hover {
+	color:#00FF66!important;
+	background-color:#206020!important;
+}
