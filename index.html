@@ -42,6 +42,56 @@
             <div id="blog" style="display: block;">
 
               <div class="article">
+                <h1 onclick="open_blog_post('keyboard_figuring_out_post')" class="w3-xxlarge w3-button w3-left-align w3-mobile">>Keyboard - figuring it out</h1>
+                <span class="w3-medium">_10_June_2019</span>
+                <span class="w3-tag w3-round-large w3-center w3-medium lighter-background">DIY</span>
+                <span class="w3-tag w3-round-large w3-center w3-medium lighter-background">arduino</span>
+                <span class="w3-tag w3-round-large w3-center w3-medium lighter-background">practical 3D print</span>
+                <div id="keyboard_figuring_out_post" class="w3-hide w3-container w3-animate-opacity">
+                  <img src="img/keyboard_soldered.jpg" class="w3-round-large w3-mobile w3-image">
+                  <p>A colleague of mine has a fancy keyboard - the OKLB Planck. It is sold as a DIY kit that you assemble and program yourself. 
+                    I was unsure how I feel about it when I first saw it. But his explanations quickly got me fascinated and I decided to make my 
+                    own - even more DIY style. I would 3D print everything and make some improvements like bluetooth. Another problem he had with 
+                    his was the lack of a way to indicate on which layout level you are. And maybe a gesture sensor to swipe with. And maybe a gyroscope 
+                    to use it like a mouse or driving wheel.</p>
+                  <p>First I decided to go simple and just make a keyboard without bluetooth or anything fancy. Then learn from the mistakes and improve 
+                    to make a second one that is closer to the real goal.</p>
+                  <p>I ordered cheap switches and a pcb to make the process easier. At this point I thought that a big step of this project will be coming 
+                    up with a good layout for my needs. Also because I take key bindings too seriously.</p>
+                  <p>I found 3D models from the original designer and decided to print them. I also found a model of a keycap and modified it to make it 
+                    printable without much support and add a bump for the index fingers. The keycaps turned out not fitting the switches, so I had to 
+                    rework them a few more times.</p>
+                  <p>The 3D models can be found <a href="https://github.com/vs-slavchev/keyboard">here on my github</a>.</p>
+                  <p>The pcb was not fitting the models I found and was not very happy with them anyway, and they were not designed to be 3D printed 
+                    to start with. I started planning how could I make a case that does not use bolts and nuts.</p>
+                  <p>I printed a few simple clips see if I could use those. Some of them I printed impoperly, some were very stiff and I struggled 
+                    to design better ones. I realised something very important then: instead of going for a perfect solution I should have gone for 
+                    a satisfactory one and improve when needed.</p>
+                  <p>I immediately made a few simple holes in a new top half model and found some M3 and M2 12mm bolts. After that I started designing 
+                    a new bottom case, but adjusting it's height would have to wait.</p>
+                  <p>Another problem was that I damaged or bricked the PCB so I also had to start again with that. The big problem was that I had 
+                    soldered the switches onto the PCB, so I had to unsolder them one by one. It cost me 4 hours and a few burns to do that. But I 
+                    did learn to do less ambitious planning upfront. I will never forget this lesson because fixing broken switches is one of the 
+                    most tedious and fiddly things I’ve ever done.</p>
+                  <p>The next step was to figure out how to use an Arduino for the keyboard. I could flash it with the QMK firmware. Or write some code myself.</p>
+                  <p>When you want to detect button presses on 48 keys while having less than 48 pins is not straight forward. So I found a few excellent blogs 
+                    on how matrix scanning works:
+                    <ul>
+                      <li><a href="http://pcbheaven.com/wikipages/How_Key_Matrices_Works/">http://pcbheaven.com/wikipages/How_Key_Matrices_Works/</a></li>
+                      <li><a href="http://blog.komar.be/how-to-make-a-keyboard-the-matrix/">http://blog.komar.be/how-to-make-a-keyboard-the-matrix/</a></li>
+                    </ul>
+                  </p>
+                  <p>After understanding the hardware I did some searching. First I found the matrix scanning code 
+                    <a href="https://github.com/Chris--A/Keypad/blob/master/src/Keypad.cpp">in a file</a> from the Keypad library for Arduino. Then I found 
+                    a <a href="https://github.com/di0ib/StenoFW/blob/master/StenoFW.ino">file</a> from a stenography keyboard open source project, which 
+                    also did a similar job. It was very helpful to learn from this available code.</p>
+                  <p>Making a keyboard without a pcb is called handwiring and I found a nice post about it: 
+                    <a href="https://geekhack.org/index.php?topic=87689.0">https://geekhack.org/index.php?topic=87689.0</a>.</p>
+                  <p>With the plan changed, and my student budget limits, I actually had more fun finding my way through.</p>
+                </div>
+              </div>
+
+              <div class="article">
                 <h1 onclick="open_blog_post('dnd_murder_mystery_post')" class="w3-xxlarge w3-button w3-left-align w3-mobile">>DnD murder mystery inspiration</h1>
                 <span class="w3-medium">_02_May_2019</span>
                 <span class="w3-tag w3-round-large w3-center w3-medium lighter-background">DnD session planning</span>
@@ -226,7 +276,7 @@
                     <li>have a specific shape or layout</li>
                     <li>the process can teach you about the devices we use everyday</li>
                   </ul>
-                  <img src="img/keyboard_soldered.jpg" class="w3-round-large w3-mobile w3-image">
+                  <img src="img/keyboard_finished.jpg" class="w3-round-large w3-mobile w3-image">
                   <a href="https://github.com/vs-slavchev/keyboard">3D models and code here</a>
               </div>
 
@@ -410,4 +460,3 @@
 <script src="js/w3_sidebar_open_close.js"></script>
 <script src="js/tab_open.js"></script>
 </html>
-
