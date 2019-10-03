@@ -36,16 +36,65 @@
         </div>
       </div>
 
-      <div class="w3-container w3-xlarge">
+      <div class="w3-container w3-large">
         <div id="page_container">
 <!-- blog -->
             <div id="blog" style="display: block;">
 
               <div class="article">
+                <h1 onclick="open_blog_post('keyboard_detecting_keys_post')" class="w3-xxlarge w3-button w3-left-align w3-mobile">>Keyboard - detecting keys</h1>
+                <span class="w3-medium">_19_June_2019</span>
+                <span class="w3-tag w3-round-large w3-center w3-medium lighter-background">arduino</span>
+                <span class="w3-tag w3-round-large w3-center w3-medium lighter-background">ghosting</span>
+                <div id="keyboard_detecting_keys_post" class="w3-hide w3-container w3-animate-opacity">
+                  <p>Because we don't have enough inputs on the arduion we can implement a key matrix to 
+                    detect which keys are pressed. This way the needed input are the number of columns plus rows.</p>
+                  <p>The way it works is that we send a signal on one row and check which columns receive it. Then check the next row the same way.</p>
+                  <p>The basic idea of the matrix scanning:
+                  <img src="img/keyboard_1_scanning.png" class="w3-round-large w3-mobile w3-image"></p>
+                  <p>There is the problem called ghosting - keys which are not really pressed register as being pressed.
+                      Using diodes we can prevent the effect. Here is how it happens when diodes are not present:
+                  <img src="img/keyboard_2_scanning.png" class="w3-round-large w3-mobile w3-image"></p>
+                  <p>As you can see the right column does receive a signal when it is the top row's turn to send it, because the signal goes 
+                    through the top-left pressed key to the left column and then to the bottom column through the bottom-left key and then to the 
+                    bottom row through the bottom-right key. That means that the top right switch is registered as pressed, but it's not.</p>
+                  <p>And here is the same scenario, but with diodes:
+                  <img src="img/keyboard_3_scanning.png" class="w3-round-large w3-mobile w3-image"></p>
+                  <p>It is a good idea to test by soldering using very little tin - just enough to hold on, instead of trying to fiddle with 
+                    holding them in place.</p>
+                  <p>I decided to switch the wiring from the blogs I read - my rows are connected directly and columns use diodes</p>
+                  <p>You can use this jewelry making pliers to make little loops that can go onto the switch legs or the wires.</p>
+                  <img src="img/keyboard_diode_loops.jpg" class="w3-round-large w3-mobile w3-image">
+                  <p>The next problem to solve is debouncing - detecting that a key is pressed and realeased many times in a short time, 
+                    while in fact the key is only being pressed or released, but the contact between the metal plates in the switch is not 
+                    really solid while in the process of moving. After doing the research I found there are hardware and software ways to solve 
+                    this problem. The hardware one is with capacitors, but that makes it more of a hassle for me. There are multiple ways to solve 
+                    it with software:
+                    <ul>
+                      <li>waiting for a certain amount of time over which no change happens - this way we can be sure that the state is stable and 
+                        we can read this as the current situation - this is slower, but might not be noticable</li>
+                      <li>detecting the first change and registering that one, then ignoring changes for some time and checking the state after this 
+                        time - this is per key and is making the decision faster than the previous one</li>
+                      <li>only checking for changes every 50 milliseconds, for example - this is fast and easy to do, but is on all keys</li>
+                      <li>track the state over time and accumulate the values to calculate to which extreme it is more close - this is not 
+                        fast and might not be very robust without tuning</li>
+                    </ul>
+                  </p>
+                  <p>My first approach is to do it the simple way and put more effort when those results become unsatisfactory for my needs. 
+                    So I will only check the state of all keys every 25 milliseconds.</p>
+                  <p>The next thing to do is make a layout for our keys. I decided to have preprocessor macros that map a readable name to a 
+                    keycode of type byte. I can send these bytes to the receiving host without mapping them. The key names I can use to initialize 
+                    a 2D array which will represent how I want my keys to be ordered. When I know the position of a pressed key in terms of row 
+                    and column I can then access the resulting keycode through the array.</p>
+                  <img src="img/keyboard_code.png" class="w3-round-large w3-mobile w3-image">
+                  <p>Later on this could become a 3D array when we need to have multiple layouts.</p>
+                </div>
+              </div>
+
+              <div class="article">
                 <h1 onclick="open_blog_post('keyboard_figuring_out_post')" class="w3-xxlarge w3-button w3-left-align w3-mobile">>Keyboard - figuring it out</h1>
                 <span class="w3-medium">_10_June_2019</span>
                 <span class="w3-tag w3-round-large w3-center w3-medium lighter-background">DIY</span>
-                <span class="w3-tag w3-round-large w3-center w3-medium lighter-background">arduino</span>
                 <span class="w3-tag w3-round-large w3-center w3-medium lighter-background">practical 3D print</span>
                 <div id="keyboard_figuring_out_post" class="w3-hide w3-container w3-animate-opacity">
                   <img src="img/keyboard_soldered.jpg" class="w3-round-large w3-mobile w3-image">
@@ -277,7 +326,7 @@
                     <li>the process can teach you about the devices we use everyday</li>
                   </ul>
                   <img src="img/keyboard_finished.jpg" class="w3-round-large w3-mobile w3-image">
-                  <a href="https://github.com/vs-slavchev/keyboard">3D models and code here</a>
+                  <a href="https://github.com/vs-slavchev/keyboard">3D models and code</a>
               </div>
 
               <div class="article">
