@@ -12,3 +12,19 @@
 	color:#00FF66!important;
 	background-color:#206020!important;
 }
+
+.w3-table-all tr:nth-child(odd) {
+    background-color: #2E4941;
+}
+
+.w3-table-all tr:nth-child(even) {
+    background-color: #313B48;
+}
+
+.w3-table-all {
+    border: 1px solid #000;
+}
+
+th {
+  background-color: #206020;
+}
