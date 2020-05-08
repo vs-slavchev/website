@@ -1,3 +1,11 @@
+#page_container {
+  width: 70%;
+}
+
+.center {
+  margin: auto;
+}
+
 .article {
     margin-top: 50px;
 }

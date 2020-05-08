@@ -1,4 +1,8 @@
 html, body, h1, h2, h3, h4, h5, h6 {
+    font-family: 'comfortaa';
+}
+
+.retro-computer-font {
     font-family: 'green-screen', monospace;
 }
 
@@ -7,7 +11,17 @@ html, body, h1, h2, h3, h4, h5, h6 {
     src: url('../font/green-screen.ttf');
 }
 
+@font-face {
+    font-family: 'comfortaa';
+    src: url('../font/Comfortaa-VariableFont_wght.ttf');
+}
+
 div.article > h1 {
     margin-bottom: 0;
 }
 
+@media screen and (max-width: 768px) {
+    #loading-screen {
+        font-size: 11px;
+    }
+}

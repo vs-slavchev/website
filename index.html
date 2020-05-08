@@ -16,7 +16,7 @@
 
   <body class="black-background">
 
-    <div id="loading-screen" class="black-background">
+    <div id="loading-screen" class="retro-computer-font">
     </div>
 
     <div id="main-loaded-site" style="display: none;">
@@ -44,7 +44,7 @@
         </div>
 
         <div class="w3-container w3-large">
-          <div id="page_container">
+          <div id="page_container" class="center">
   <!-- blog -->
               <div id="blog" style="display: block;">
 
@@ -60,7 +60,7 @@
                   <div id="german_pronouns_post" class="w3-hide w3-container w3-animate-opacity">
                     <p>Learning words in a new language is best done when connecting the concept of something directly to the word in the new language - as
                       opposed to mapping the new word to the one in your mother tongue which is in turn mapped to the concept.</p>
-                    <p>To help you and me form the habit of directly mapping the new word to the concept, I will show an example with something that makes
+                    <p>To help you and me form the habit of directly mapping the new word to the concept, I will show an example with words that makes
                       this approach a necessity: the pronouns in the German language. There are a lot of 'sie' and in English we use 'you' for many
                       different cases, so this missmatch and repeatedly using the same word for different meanings is a good example.
                     </p>
@@ -113,7 +113,7 @@
                       </div>
                     </div>
 
-                    <div class="w3-responsive" style="width: 30%;">
+                    <div class="w3-responsive center" style="width: 50%;">
                       <br>
                       Nominativ:
                       <table class="w3-table-all">
@@ -222,8 +222,8 @@
 
 
                     <p>sources: <br>
-                        <a href="https://german.stackexchange.com/a/48144">https://german.stackexchange.com/a/48144</a> <br>
-                        <a href="https://en.wikibooks.org/wiki/German/Grammar/Pronouns">https://en.wikibooks.org/wiki/German/Grammar/Pronouns</a>
+                        <a href="https://en.wikibooks.org/wiki/German/Grammar/Pronouns">https://en.wikibooks.org/wiki/German/Grammar/Pronouns</a> <br>
+                        <a href="https://german.stackexchange.com/a/48144">https://german.stackexchange.com/a/48144</a> 
                     </p>
                     <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
                       from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
@@ -246,7 +246,7 @@
                     <p>I stumbled upon this wikipedia article of a Belgian who lived in the 19th-20th century and the article had only 1400 visitors over the 
                       last 30 days. I thought it was a pity that I had never heard of that man. His name was Paul Otlet and he wanted access to knowledge for 
                       people. His friend and colleague Henry La Fontaine was the first president of the International Peace Bureau - the world’s oldest 
-                      international peace organisation, with 10 of its members having received a Nobel Peace prize - his article even less visited.</p>
+                      international peace organisation, with 10 of its members having receved a Nobel Peace prize - his article even less visited.</p>
                     <p>In short Otlet got fascinated by sharing information and setup a service where cards containing text were carefully curated and 
                       systematically queried. The amount of requests quickly grew in a matter of years. This is why I mentioned wikipedia earlier, it was 
                       the same - just in 1896, and much slower. It was meant to be easier to use it for searching and had a concept similar to hyperlinks.</p>
@@ -276,22 +276,22 @@
                     <p>Because we don't have enough inputs on the arduion we can implement a key matrix to 
                       detect which keys are pressed. This way the needed input are the number of columns plus rows.</p>
                     <p>The way it works is that we send a signal on one row and check which columns receive it. Then check the next row the same way.</p>
-                    <p>The basic idea of the matrix scanning:
-                    <img src="img/keyboard_1_scanning.png" class="w3-round-large w3-mobile w3-image"></p>
+                    <p>The basic idea of the matrix scanning:<br>
+                    <img src="img/keyboard_1_scanning.png" class="w3-round-large w3-mobile w3-image center"></p>
                     <p>There is the problem called ghosting - keys which are not really pressed register as being pressed.
                         Using diodes we can prevent the effect.</p>
-                    <p> Here is how it happens when diodes are not present:
+                    <p> Here is how it happens when diodes are not present:<br>
                     <img src="img/keyboard_2_scanning.png" class="w3-round-large w3-mobile w3-image"></p>
                     <p>As you can see the right column does receive a signal when it is the top row's turn to send it, because the signal goes 
                       through the top-left pressed key to the left column and then to the bottom column through the bottom-left key and then to the 
                       bottom row through the bottom-right key. That means that the top right switch is registered as pressed, but it's not.</p>
-                    <p>And here is the same scenario, but with diodes:
+                    <p>And here is the same scenario, but with diodes:<br>
                     <img src="img/keyboard_3_scanning.png" class="w3-round-large w3-mobile w3-image"></p>
                     <p>It is a good idea to test by soldering using very little tin - just enough to hold on, instead of trying to fiddle with 
                       holding them in place.</p>
                     <p>I decided to switch the wiring from the blogs I read - my rows are connected directly and columns use diodes</p>
-                    <p>You can use this jewelry making pliers to make little loops that can go onto the switch legs or the wires.</p>
-                    <img src="img/keyboard_diode_loops.jpg" class="w3-round-large w3-mobile w3-image">
+                    <p>You can use this jewelry making pliers to make little loops that can go onto the switch legs or the wires. <br>
+                    <img src="img/keyboard_diode_loops.jpg" class="w3-round-large w3-mobile w3-image"></p>
                     <p>The next problem to solve is debouncing - detecting that a key is pressed and realeased many times in a short time, 
                       while in fact the key is only being pressed or released, but the contact between the metal plates in the switch is not 
                       really solid while in the process of moving. After doing the research I found there are hardware and software ways to solve 
@@ -770,14 +770,13 @@
                   <h1 class="w3-xxlarge">>Fountain in 2/28 Park in Taipei</h1>
                   <p>The sprinklers move in tact to a music and lights colour the water in vivid hues. I liked the simple combination of the changing figures 
                     drawn by the water, the music and the colors.</p>
-                  <p>There are benches in the open walkway where the photo is taken from.</p>
                   <img src="img/228_fountain.jpg" class="w3-round-large w3-mobile w3-image">
                 </div>
 
                 <div class="article">
                   <h1 class="w3-xxlarge">>Rock chair in Montreux</h1>
                   <p>A few of the rocks on the shore of the lake make a surprisingly comfortable chair. It is possible the passing ship makes waves big 
-                    enough to reach you and splash you a bit, but that might be what you need on a hot day.</p>
+                    enough to reach you and splash you a bit, but that might be exactly what you need on a hot day.</p>
                   <img src="img/montreux_rock_chair.jpg" class="w3-round-large w3-mobile w3-image">
                 </div>
 
@@ -793,7 +792,7 @@
   <!-- contact -->
               <div id="contact" style="display: none;">
 
-                <p>email: veselin@vs-slavchev.com</p>
+                <p>email: veselin at vs-slavchev.com</p>
                 <p>linkedin: <a href="https://www.linkedin.com/in/veselinslavchev/">Veselin Slavchev</a></p>
                 <p>github: <a href="https://github.com/vs-slavchev">vs-slavchev</a></p>
     
