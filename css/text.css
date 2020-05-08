@@ -29,3 +29,7 @@ div.article > h1 {
 h1.prompt::before {
     content: ">";
 }
+
+a {
+    word-break: break-all;
+}
