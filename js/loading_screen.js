@@ -56,8 +56,8 @@ async function run_loading_screen() {
     await sleep(get_time_step(4));
     add_line_to_loading_screen("Done... Starting...");
     await sleep(350);
-    //finish_loading_animation();
+    finish_loading_animation();
 }
 
-run_loading_screen();
-//finish_loading_animation();
+//run_loading_screen();
+finish_loading_animation();

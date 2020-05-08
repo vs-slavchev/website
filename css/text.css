@@ -25,3 +25,7 @@ div.article > h1 {
         font-size: 11px;
     }
 }
+
+h1.prompt::before {
+    content: ">";
+}
