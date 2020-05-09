@@ -3,4 +3,10 @@
     height:100vh;
     padding-left: 5%;
     padding-top: 5%;
+	animation: screen-turn-on 5s;
+}
+
+@keyframes screen-turn-on {
+	from {background-color: #000;}
+	to {background-color: #282828;}
 }

@@ -33,3 +33,9 @@ h1.prompt::before {
 a {
     word-break: break-all;
 }
+
+td > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
