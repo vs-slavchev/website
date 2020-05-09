@@ -2,34 +2,34 @@
 <html>
   <head>
     <title>vs_slavchev's cyberspace</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
-    <link rel="stylesheet" href="css/loading_screen.css">
-    <link rel="stylesheet" href="css/colors.css">
-    <link rel="stylesheet" href="css/text.css">
-    <link rel="stylesheet" href="css/content.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://www.w3schools.com/w3css/4/w3pro.css" rel="stylesheet">
+    <link href="css/loading_screen.css" rel="stylesheet">
+    <link href="css/colors.css" rel="stylesheet">
+    <link href="css/text.css" rel="stylesheet">
+    <link href="css/content.css" rel="stylesheet">
     
-    <link rel="shortcut icon" href="img/favicon.ico"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link href="img/favicon.ico" rel="shortcut icon"/>
+    <link href="img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="img/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
   </head>
 
   <body class="black-background">
 
-    <div id="loading-screen" class="retro-computer-font">
+    <div class="retro-computer-font" id="loading-screen">
     </div>
 
     <div id="main-loaded-site" style="display: none;">
       <div class="black-background w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left w3-xxlarge"
-      style="width:250px;" id="mySidebar">
+      id="mySidebar" style="width:250px;">
         <button class="w3-bar-item w3-button w3-large w3-hide-large w3-right-align"
           onclick="w3_close()">Close X</button>
         <!-- <p class="w3-bar-item w3-large">>ls --w=1</p> -->
         <div style="margin-top:78px">
-            <a onclick="openPage('blog')" href="#" class="w3-bar-item w3-button">blog</a>
-            <a onclick="openPage('projects')" href="#" class="w3-bar-item w3-button">projects</a>
-            <a onclick="openPage('places')" href="#" class="w3-bar-item w3-button">places</a>
-            <a onclick="openPage('contact')" href="#" class="w3-bar-item w3-button">contact</a>
+            <a class="w3-bar-item w3-button" href="#" onclick="openPage('blog')">blog</a>
+            <a class="w3-bar-item w3-button" href="#" onclick="openPage('projects')">projects</a>
+            <a class="w3-bar-item w3-button" href="#" onclick="openPage('places')">places</a>
+            <a class="w3-bar-item w3-button" href="#" onclick="openPage('contact')">contact</a>
         </div>
       </div>
 
@@ -43,19 +43,21 @@
           </div>
         </div>
 
-        <div class="w3-large">
+        <div class="w3-container w3-large">
+          <div id="page_container">
   <!-- blog -->
+            <div id="blog" style="display:block;">
 
-		<div class="article">
-                  <div class="article-header">
-                      <h1 onclick="open_blog_post('german_pronouns_post')" class="prompt w3-xlarge w3-button w3-left-align w3-mobile">A different look at German pronouns</h1>
-                      <div class="undertitle">
-                         <span>_03_May_2020</span>
-                          <span class="w3-tag w3-round-large w3-center lighter-background">german language</span>
-                          <span class="w3-tag w3-round-large w3-center lighter-background">learning</span>  
-                      </div>
-                  </div>
-		  <div id="german_pronouns_post" class="w3-hide w3-container w3-animate-opacity w3-show">
+              <div class="article">
+                        <div class="article-header">
+                            <h1 class="prompt w3-xlarge w3-button w3-left-align w3-mobile" onclick="open_blog_post('german_pronouns_post')">A different look at German pronouns</h1>
+                            <div class="undertitle">
+                               <span>_03_May_2020</span>
+                                <span class="w3-tag w3-round-large w3-center lighter-background">german language</span>
+                                <span class="w3-tag w3-round-large w3-center lighter-background">learning</span>
+                            </div>
+                        </div>
+                <div class="w3-hide w3-container w3-animate-opacity" id="german_pronouns_post">
                     <p>Learning words in a new language is best done when connecting the concept of something directly to the word in the new language - as
                       opposed to mapping the new word to the one in your mother tongue which is in turn mapped to the concept.</p>
                     <p>To help you and me form the habit of directly mapping the new word to the concept, I will show an example with words that makes
@@ -215,21 +217,22 @@
                         <a href="https://german.stackexchange.com/a/48144">https://german.stackexchange.com/a/48144</a> 
                     </p>
                     <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
-                      from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+                      from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+                    </div>
                   </div>
                 </div>
 
                 <div class="article">
                   <div class="article-header">
-                      <h1 onclick="open_blog_post('paul_otlet_post')" class="prompt w3-xlarge w3-button w3-left-align w3-mobile">Informaton science fathers</h1>
+                      <h1 class="prompt w3-xlarge w3-button w3-left-align w3-mobile" onclick="open_blog_post('paul_otlet_post')">Informaton science fathers</h1>
                       <div class="undertitle">
                           <span>_10_October_2019</span>
                           <span class="w3-tag w3-round-large w3-center lighter-background">history</span>
                           <span class="w3-tag w3-round-large w3-center lighter-background">science</span>  
                       </div>
                   </div>
-                  <div id="paul_otlet_post" class="w3-hide w3-container w3-animate-opacity">
-                    <img src="img/mundaneum.jpg" class="w3-round-large w3-mobile w3-image">
+                  <div class="w3-hide w3-container w3-animate-opacity" id="paul_otlet_post">
+                    <img class="w3-round-large w3-mobile w3-image" src="img/mundaneum.jpg">
                     <p>In the time of high attention to AI and data science we talk about the high value of data and how large amounts of it are precious. 
                       Governments try to regulate how it is collected, shared and protected. But do you know who are the fathers of information science?</p>
                     <p>I stumbled upon this wikipedia article of a Belgian who lived in the 19th-20th century and the article had only 1400 visitors over the 
@@ -254,33 +257,33 @@
 
                 <div class="article">
                   <div class="article-header">
-                    <h1 onclick="open_blog_post('keyboard_detecting_keys_post')" class="prompt w3-xlarge w3-button w3-left-align w3-mobile">Keyboard - detecting keys</h1>
+                    <h1 class="prompt w3-xlarge w3-button w3-left-align w3-mobile" onclick="open_blog_post('keyboard_detecting_keys_post')">Keyboard - detecting keys</h1>
                     <div class="undertitle">
                         <span>_19_June_2019</span>
                         <span class="w3-tag w3-round-large w3-center lighter-background">arduino</span>
                         <span class="w3-tag w3-round-large w3-center lighter-background">ghosting</span>
                     </div>
                   </div>
-                  <div id="keyboard_detecting_keys_post" class="w3-hide w3-container w3-animate-opacity">
-                    <p>Because we don't have enough inputs on the arduion we can implement a key matrix to 
+                  <div class="w3-hide w3-container w3-animate-opacity" id="keyboard_detecting_keys_post">
+                    <p>Because we don't have enough inputs on the arduio we can implement a key matrix to
                       detect which keys are pressed. This way the needed input are the number of columns plus rows.</p>
                     <p>The way it works is that we send a signal on one row and check which columns receive it. Then check the next row the same way.</p>
                     <p>The basic idea of the matrix scanning:<br>
-                    <img src="img/keyboard_1_scanning.png" class="w3-round-large w3-mobile w3-image center"></p>
+                    <img class="w3-round-large w3-mobile w3-image center" src="img/keyboard_1_scanning.png"></p>
                     <p>There is the problem called ghosting - keys which are not really pressed register as being pressed.
                         Using diodes we can prevent the effect.</p>
                     <p> Here is how it happens when diodes are not present:<br>
-                    <img src="img/keyboard_2_scanning.png" class="w3-round-large w3-mobile w3-image"></p>
+                    <img class="w3-round-large w3-mobile w3-image" src="img/keyboard_2_scanning.png"></p>
                     <p>As you can see the right column does receive a signal when it is the top row's turn to send it, because the signal goes 
                       through the top-left pressed key to the left column and then to the bottom column through the bottom-left key and then to the 
                       bottom row through the bottom-right key. That means that the top right switch is registered as pressed, but it's not.</p>
                     <p>And here is the same scenario, but with diodes:<br>
-                    <img src="img/keyboard_3_scanning.png" class="w3-round-large w3-mobile w3-image"></p>
+                    <img class="w3-round-large w3-mobile w3-image" src="img/keyboard_3_scanning.png"></p>
                     <p>It is a good idea to test by soldering using very little tin - just enough to hold on, instead of trying to fiddle with 
                       holding them in place.</p>
                     <p>I decided to switch the wiring from the blogs I read - my rows are connected directly and columns use diodes</p>
                     <p>You can use this jewelry making pliers to make little loops that can go onto the switch legs or the wires. <br>
-                    <img src="img/keyboard_diode_loops.jpg" class="w3-round-large w3-mobile w3-image"></p>
+                    <img class="w3-round-large w3-mobile w3-image" src="img/keyboard_diode_loops.jpg"></p>
                     <p>The next problem to solve is debouncing - detecting that a key is pressed and realeased many times in a short time, 
                       while in fact the key is only being pressed or released, but the contact between the metal plates in the switch is not 
                       really solid while in the process of moving. After doing the research I found there are hardware and software ways to solve 
@@ -302,22 +305,22 @@
                       keycode of type byte. I can send these bytes to the receiving host without mapping them. The key names I can use to initialize 
                       a 2D array which will represent how I want my keys to be ordered. When I know the position of a pressed key in terms of row 
                       and column I can then access the resulting keycode through the array.</p>
-                    <img src="img/keyboard_code.png" class="w3-round-large w3-mobile w3-image">
+                    <img class="w3-round-large w3-mobile w3-image" src="img/keyboard_code.png">
                     <p>Later on this could become a 3D array when we need to have multiple layouts.</p>
                   </div>
                 </div>
 
                 <div class="article">
                   <div class="article-header">
-                    <h1 onclick="open_blog_post('keyboard_figuring_out_post')" class="prompt w3-xlarge w3-button w3-left-align w3-mobile">Keyboard - figuring it out</h1>
+                    <h1 class="prompt w3-xlarge w3-button w3-left-align w3-mobile" onclick="open_blog_post('keyboard_figuring_out_post')">Keyboard - figuring it out</h1>
                     <div class="undertitle">
                         <span>_10_June_2019</span>
                         <span class="w3-tag w3-round-large w3-center lighter-background">DIY</span>
                         <span class="w3-tag w3-round-large w3-center lighter-background">practical 3D print</span>
                     </div>
                   </div>
-                  <div id="keyboard_figuring_out_post" class="w3-hide w3-container w3-animate-opacity">
-                    <img src="img/keyboard_soldered.jpg" class="w3-round-large w3-mobile w3-image">
+                  <div class="w3-hide w3-container w3-animate-opacity" id="keyboard_figuring_out_post">
+                    <img class="w3-round-large w3-mobile w3-image" src="img/keyboard_soldered.jpg">
                     <p>A colleague of mine has a fancy keyboard - the OKLB Planck. It is sold as a DIY kit that you assemble and program yourself. 
                       I was unsure how I feel about it when I first saw it. But his explanations quickly got me fascinated and I decided to make my 
                       own - even more DIY style. I would 3D print everything and make some improvements like bluetooth. Another problem he had with 
@@ -362,14 +365,14 @@
 
                 <div class="article">
                   <div class="article-header">
-                    <h1 onclick="open_blog_post('dnd_murder_mystery_post')" class="prompt w3-xlarge w3-button w3-left-align w3-mobile">DnD murder mystery inspiration</h1>
+                    <h1 class="prompt w3-xlarge w3-button w3-left-align w3-mobile" onclick="open_blog_post('dnd_murder_mystery_post')">DnD murder mystery inspiration</h1>
                     <div class="undertitle">
                         <span>_02_May_2019</span>
                         <span class="w3-tag w3-round-large w3-center lighter-background">DnD session planning</span>
                     </div>
                   </div>
-                  <div id="dnd_murder_mystery_post" class="w3-hide w3-container w3-animate-opacity">
-                    <img src="img/dnd-map-planning.jpg" class="w3-round-large w3-mobile w3-image">
+                  <div class="w3-hide w3-container w3-animate-opacity" id="dnd_murder_mystery_post">
+                    <img class="w3-round-large w3-mobile w3-image" src="img/dnd-map-planning.jpg">
                     <p>I wanted to make a murder mystery for my DnD group. When the moment came and I started preparing for the session I found there is a lot of 
                       advice, but not a lot of easy inspiration. There are a few prepared adventures, and those are not very polished or detailed. I used some of 
                       them for inspiration and a base and stole some ideas from them. Maybe you can take mine and improve it to have fun with your players.</p>
@@ -435,15 +438,15 @@
 
                 <div class="article">
                   <div class="article-header">
-                    <h1 onclick="open_blog_post('switching_to_intellij_post')" class="prompt w3-xlarge w3-button w3-left-align w3-mobile">Switching to and customizing IntelliJ</h1>
+                    <h1 class="prompt w3-xlarge w3-button w3-left-align w3-mobile" onclick="open_blog_post('switching_to_intellij_post')">Switching to and customizing IntelliJ</h1>
                     <div class="undertitle">
                         <span>_18_October_2016</span>
                         <span class="w3-tag w3-round-large w3-center lighter-background">IntelliJ</span>
                         <span class="w3-tag w3-round-large w3-center lighter-background">comfort</span>
                     </div>
                   </div>
-                  <div id="switching_to_intellij_post" class="w3-hide w3-container w3-animate-opacity">
-                    <img src="img/keybindings.jpg" class="w3-round-large w3-mobile w3-image">
+                  <div class="w3-hide w3-container w3-animate-opacity" id="switching_to_intellij_post">
+                    <img class="w3-round-large w3-mobile w3-image" src="img/keybindings.jpg">
                     <p>Hello! Read on if you decided to switch to IntelliJ, set it up, make it comfortable and learn how to be more productive with it. 
                       This post covers some settings and custom shortcuts.</p>
                     <p>The first things that annoyed me were the popups in the top-right corner. To disable some of them:
@@ -506,7 +509,7 @@
                     <p>Go to previous/next method => <b>Alt Up/Down</b></p>
                     <p>Go back to code => <b>Ctrl Alt Left</b></p>
                     <p>Go to next error => <b>F2</b></p>
-                    <p>Expand all => Ctrl Shift =</p>
+                    <p>Expand all folded => Ctrl Shift =</p>
                     <p>Parameter info in method call => <b>Ctrl P</b></p>
                     <p>Show TODO list => <b>Alt 6</b></p>
                     <p>Bring up the file/class/method quicksearch => <b>Shift Shift</b></p>
@@ -519,15 +522,15 @@
 
                 <div class="article">
                   <div class="article-header">
-                    <h1 onclick="open_blog_post('termites_post')" class="prompt w3-xlarge w3-button w3-left-align w3-mobile">The mystery of termite communication</h1>
+                    <h1 class="prompt w3-xlarge w3-button w3-left-align w3-mobile" onclick="open_blog_post('termites_post')">The mystery of termite communication</h1>
                     <div class="undertitle">
                         <span>_06_November_2015</span>
                         <span class="w3-tag w3-round-large w3-center lighter-background">artificial life</span>
                         <span class="w3-tag w3-round-large w3-center lighter-background">emergent behaviour</span>
                     </div>
                   </div>
-                  <div id="termites_post" class="w3-hide w3-container w3-animate-opacity">
-                    <img src="img/artificial.jpg" class="w3-round-large w3-mobile w3-image">
+                  <div class="w3-hide w3-container w3-animate-opacity" id="termites_post">
+                    <img class="w3-round-large w3-mobile w3-image" src="img/artificial.jpg">
                     <p>Until the 1960s scientists could not explain how termites manage to organise their activity to gather and pile up
                       in one place all the wood pieces they find. Different theories tried to explain this like unaudible languages, but
                       the truth was that they just followed simple rules, from which emerged a complex behaviour.</p>
@@ -553,9 +556,9 @@
                         <span class="w3-tag w3-round-large w3-center lighter-background">maker culture</span>
                         <span class="w3-tag w3-round-large w3-center lighter-background">arduino</span>
                     </div>
-                    <p>You can make your custom comfortable keyboard.</p>
-                    <p>Program it, model it, make it unique, learn how to make it better for you.</p>
-                    <img src="img/keyboard_finished.jpg" class="w3-round-large w3-mobile w3-image">
+                    <p>A comfortable personalised keyboard.</p>
+                  <p>Custom 3D models, simple understandable arduino firmware code, manageable wiring.</p>
+                  <img class="w3-round-large w3-mobile w3-image" src="img/keyboard_finished.jpg">
                     <a href="https://github.com/vs-slavchev/keyboard">3D models and code</a>
                 </div>
 
@@ -568,7 +571,7 @@
                     </div>
                     <p>A wooden robot that is an arm on tank tracks. The tracks were 3D printed and the wooden structure is made from glued sticks.
                       A raspberry controls with Python the 4 servos of the arm and the 2 motors for the tracks.</p>
-                    <img src="img/roboter.jpg" class="w3-round-large w3-mobile w3-image">
+                    <img class="w3-round-large w3-mobile w3-image" src="img/roboter.jpg">
                 </div>
                   
                 <div class="article">
@@ -582,7 +585,7 @@
                   <p>A cyberspace game made using LibGDX and Java 8. Fight against the AI overlord of a system gone rogue, navigate your way in barren 
                     artificial landscapes and try to comprehend where reality bleeds into virtuality. Made together with
                     <a href="http://github.com/BozhidarHrusanov">Bozhidar Hrusanov</a>.</p>
-                  <img src="https://cloud.githubusercontent.com/assets/10689151/16925491/c1e9eb46-4d24-11e6-8fca-f26b0c3bbf92.gif" class="w3-round-large w3-mobile w3-image">
+                  <img class="w3-round-large w3-mobile w3-image" src="https://cloud.githubusercontent.com/assets/10689151/16925491/c1e9eb46-4d24-11e6-8fca-f26b0c3bbf92.gif">
                   <p>Download: <a href="https://github.com/vs-slavchev/Virtual-Evil/releases">from github</a></p>
                 </div>
 
@@ -596,7 +599,7 @@
                   <p>Java 2D space invaders game, but with a story twist. Captain Manol, a pirate captain, had his ship fleet sunken after a confrontation with the
                       invading aliens, but managed to get hold of one of their ships. Now his mastery of sailing leads him on a revenge to invade the aliens' space.</p>
                   <p> I wanted to experiment with user experience: animations, notifications and sounds.</p>
-                    <img src="https://cloud.githubusercontent.com/assets/10689151/16804471/b580b2fe-4914-11e6-8ed6-fc18281d7df2.gif" class="w3-round-large w3-mobile w3-image">
+                    <img class="w3-round-large w3-mobile w3-image" src="https://cloud.githubusercontent.com/assets/10689151/16804471/b580b2fe-4914-11e6-8ed6-fc18281d7df2.gif">
                     <p>Download: <a href="https://github.com/vs-slavchev/Invade-yer-space/releases">from github</a></p>
                 </div>
 
@@ -610,7 +613,7 @@
                   <p>A Java 2D asteroids game with spaceships based on rotating around and having to manage your velocity and acceleration.
                     It has 5 different enemies which use different attack strategies, various powerups, fast dangerous asteroids. Made together with
                     <a href="http://github.com/BozhidarHrusanov">Bozhidar Hrusanov</a>.</p>
-                  <img src="img/sanitys_eclipse.gif" class="w3-round-large w3-mobile w3-image">
+                  <img class="w3-round-large w3-mobile w3-image" src="img/sanitys_eclipse.gif">
                   <p>Find it <a href="https://github.com/vs-slavchev/Small_projects/tree/master/Sanity's%20Eclipse">at github</a></p>
                 </div>
 
@@ -638,7 +641,7 @@
                     <p>A 2D game written in 2 days and a half in C++ for game programming competition. The theme of all games was "bubbles".
                       In the game you compete with the evil bubble to collect more bathroom bubbles and become the biggest bubble.
                     </p>
-                    <img src="img/bubble-rebel.gif" class="w3-round-large w3-mobile w3-image">
+                    <img class="w3-round-large w3-mobile w3-image" src="img/bubble-rebel.gif">
                     <p>Download: <a href="https://github.com/vs-slavchev/Small_projects/tree/master/Bubble%20Rebel">from github</a></p>
                   </div>
 
@@ -649,7 +652,7 @@
                       <span class="w3-tag w3-round-large w3-center lighter-background">Allegro</span>
                   </div>
                   <p>Help Yani collect all the cultural relics so he can finaly face his greatest enemy and learn about appreciating other's cultures.</p>
-                  <img src="img/yani_rise.bmp" class="w3-round-large w3-mobile w3-image">
+                  <img class="w3-round-large w3-mobile w3-image" src="img/yani_rise.bmp">
                   <p>Download: <a href="https://github.com/vs-slavchev/Small_projects/tree/master/Yani%20Rise%20to%20Power">from github</a></p>
                 </div>
 
@@ -673,7 +676,7 @@
                   <p>2D tiled fantasy game written in C++ with Allegro 4. The game has an inventory system, abilities and cooldowns, multi-layer
                     map and map editor, character stats, an enormous map that is visibly chunked, npcs to talk to. It taught me basics of OOP,
                     rendering 2D graphics and using arrays of pointers.</p>
-                  <img src="img/strength-and-steel.png" class="w3-round-large w3-mobile w3-image">
+                  <img class="w3-round-large w3-mobile w3-image" src="img/strength-and-steel.png">
                 </div>
 
                 <div class="article">
@@ -694,8 +697,8 @@
                         </ul>
                         <div class="w3-row-padding w3-margin-top">
                           <div class="w3-col" style="width:90%">
-                            <iframe width="30%" height="100%" src="https://www.youtube.com/embed/_8R3p5hgbbY?start=26" frameborder="0" 
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0" height="100%"
+                            src="https://www.youtube.com/embed/_8R3p5hgbbY?start=26" width="30%"></iframe>
                           </div>
                         </div>
                     <p>Download: <a href="https://github.com/vs-slavchev/Small_projects/tree/master/BTND">from github</a></p>
@@ -708,7 +711,7 @@
                       <span class="w3-tag w3-round-large w3-center lighter-background">text-based</span>
                   </div>
                   <p>My first C++ game - a text-based fantasy RPG with many different enemies, combat scenarios and outcomes.</p>
-                  <img src="img/WoV_map.jpg" class="w3-round-large w3-mobile w3-image">
+                  <img class="w3-round-large w3-mobile w3-image" src="img/WoV_map.jpg">
                 </div>
 
                 <div class="article">
@@ -722,7 +725,7 @@
                     the bugs. The goal was to have a variety of levels not fitting with eachother and not constrained by story. Most bosses have
                     unique mechanics and theme.
                   </p>
-                  <img src="img/dtp.png" class="w3-round-large w3-mobile w3-image">
+                  <img class="w3-round-large w3-mobile w3-image" src="img/dtp.png">
                   <p>Download: <a href="https://github.com/vs-slavchev/Small_projects/tree/master/DTP">from github</a></p>
                 </div>
 
@@ -739,7 +742,7 @@
                         fun facts and small doses of history, different places, characters, abilities for the players to choose, riddles and mysteries, 
                         action and combat, calm sceneries of nature's beauty.
                     </p>
-                    <img src="img/haiduti.png" class="w3-round-large w3-mobile w3-image">
+                    <img class="w3-round-large w3-mobile w3-image" src="img/haiduti.png">
                     <a href="https://github.com/vs-slavchev/Haiduti">Find it here</a>
                   </div>
                   <br>
@@ -753,27 +756,27 @@
                   <h1 class="prompt w3-xxlarge">Tent in Daan Park in Taipei</h1>
                   <p>This tent and table with chair are next to a pond in the middle of the park. The shade keeps you cool and the green surroundings make a 
                     nice place to do some work in a relaxing atmosphere.</p>
-                  <img src="img/daan_park.jpg" class="w3-round-large w3-mobile w3-image">
+                  <img class="w3-round-large w3-mobile w3-image" src="img/daan_park.jpg">
                 </div>
 
                 <div class="article">
                   <h1 class="prompt w3-xxlarge">Fountain in 2/28 Park in Taipei</h1>
                   <p>The sprinklers move in tact to a music and lights colour the water in vivid hues. I liked the simple combination of the changing figures 
                     drawn by the water, the music and the colors.</p>
-                  <img src="img/228_fountain.jpg" class="w3-round-large w3-mobile w3-image">
+                  <img class="w3-round-large w3-mobile w3-image" src="img/228_fountain.jpg">
                 </div>
 
                 <div class="article">
                   <h1 class="prompt w3-xxlarge">Rock chair in Montreux</h1>
                   <p>A few of the rocks on the shore of the lake make a surprisingly comfortable chair. It is possible the passing ship makes waves big 
                     enough to reach you and splash you a bit, but that might be exactly what you need on a hot day.</p>
-                  <img src="img/montreux_rock_chair.jpg" class="w3-round-large w3-mobile w3-image">
+                  <img class="w3-round-large w3-mobile w3-image" src="img/montreux_rock_chair.jpg">
                 </div>
 
                 <div class="article">
                   <h1 class="prompt w3-xxlarge">Bench next to the lake in Eindhoven</h1>
                   <p>Quiet place if you can ignore the quacks of the ducks.</p>
-                  <img src="img/eindhoven_lake.jpg" class="w3-round-large w3-mobile w3-image">
+                  <img class="w3-round-large w3-mobile w3-image" src="img/eindhoven_lake.jpg">
                 </div>
 
                 <br>
