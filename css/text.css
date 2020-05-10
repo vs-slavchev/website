@@ -20,9 +20,44 @@ div.article > h1 {
     margin-bottom: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
+    #loading-screen {
+        font-size: 9px;
+    }
+
+    div.flip-card-back > p.small-card-back-description {
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
     #loading-screen {
         font-size: 11px;
+    }
+
+    div.flip-card-back > p.small-card-back-description {
+        font-size: 11px;
+    }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    div.flip-card-back > p.small-card-back-description {
+        font-size: 7px;
+    }
+}
+
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    div.flip-card-back > p.small-card-back-description {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    div.flip-card-back > p.small-card-back-description {
+        font-size: 10px;
     }
 }
 
@@ -39,3 +74,5 @@ td > div {
     align-items: center;
     justify-content: center;
 }
+
+
