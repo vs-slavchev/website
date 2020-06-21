@@ -9,6 +9,7 @@
     <link href="css/text.css" rel="stylesheet">
     <link href="css/content.css" rel="stylesheet">
     <link href="css/flipcard.css" rel="stylesheet">
+    <link href="css/scrollbar.css" rel="stylesheet">
 
     <link href="img/favicon.ico" rel="shortcut icon"/>
     <link href="img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
@@ -270,21 +271,21 @@
                       detect which keys are pressed. This way the needed input are the number of columns plus rows.</p>
                     <p>The way it works is that we send a signal on one row and check which columns receive it. Then check the next row the same way.</p>
                     <p>The basic idea of the matrix scanning:<br>
-                    <img class="w3-round-large w3-mobile w3-image center" src="img/keyboard_1_scanning.png"></p>
+                    <img class="w3-round-large w3-mobile w3-image center" src="img/keyboard/1_scanning.png"></p>
                     <p>There is the problem called ghosting - keys which are not really pressed register as being pressed.
                         Using diodes we can prevent the effect.</p>
                     <p> Here is how it happens when diodes are not present:<br>
-                    <img class="w3-round-large w3-mobile w3-image" src="img/keyboard_2_scanning.png"></p>
+                    <img class="w3-round-large w3-mobile w3-image" src="img/keyboard/2_scanning.png"></p>
                     <p>As you can see the right column does receive a signal when it is the top row's turn to send it, because the signal goes 
                       through the top-left pressed key to the left column and then to the bottom column through the bottom-left key and then to the 
                       bottom row through the bottom-right key. That means that the top right switch is registered as pressed, but it's not.</p>
                     <p>And here is the same scenario, but with diodes:<br>
-                    <img class="w3-round-large w3-mobile w3-image" src="img/keyboard_3_scanning.png"></p>
+                    <img class="w3-round-large w3-mobile w3-image" src="img/keyboard/3_scanning.png"></p>
                     <p>It is a good idea to test by soldering using very little tin - just enough to hold on, instead of trying to fiddle with 
                       holding them in place.</p>
                     <p>I decided to switch the wiring from the blogs I read - my rows are connected directly and columns use diodes</p>
                     <p>You can use this jewelry making pliers to make little loops that can go onto the switch legs or the wires. <br>
-                    <img class="w3-round-large w3-mobile w3-image" src="img/keyboard_diode_loops.jpg"></p>
+                    <img class="w3-round-large w3-mobile w3-image" src="img/keyboard/diode_loops.jpg"></p>
                     <p>The next problem to solve is debouncing - detecting that a key is pressed and realeased many times in a short time, 
                       while in fact the key is only being pressed or released, but the contact between the metal plates in the switch is not 
                       really solid while in the process of moving. After doing the research I found there are hardware and software ways to solve 
@@ -306,7 +307,7 @@
                       keycode of type byte. I can send these bytes to the receiving host without mapping them. The key names I can use to initialize 
                       a 2D array which will represent how I want my keys to be ordered. When I know the position of a pressed key in terms of row 
                       and column I can then access the resulting keycode through the array.</p>
-                    <img class="w3-round-large w3-mobile w3-image" src="img/keyboard_code.png">
+                    <img class="w3-round-large w3-mobile w3-image" src="img/keyboard/code.png">
                     <p>Later on this could become a 3D array when we need to have multiple layouts.</p>
                   </div>
                 </div>
@@ -321,7 +322,7 @@
                     </div>
                   </div>
                   <div class="w3-hide w3-container w3-animate-opacity" id="keyboard_figuring_out_post">
-                    <img class="w3-round-large w3-mobile w3-image" src="img/keyboard_soldered.jpg">
+                    <img class="w3-round-large w3-mobile w3-image" src="img/keyboard/soldered.jpg">
                     <p>A colleague of mine has a fancy keyboard - the OKLB Planck. It is sold as a DIY kit that you assemble and program yourself. 
                       I was unsure how I feel about it when I first saw it. But his explanations quickly got me fascinated and I decided to make my 
                       own - even more DIY style. I would 3D print everything and make some improvements like bluetooth. Another problem he had with 
@@ -383,50 +384,50 @@
                     <p>Make sure to have prepared statblocks for all the stuff they can encounter.</p>
                     <p>I was greatly inspired by the adventure called 
                       <a href="https://www.dmsguild.com/product/181052/How-Not-to-Host-a-Murder-5e">"How not to host a murder mystery"</a></p>
-                    <p>I have left out the names as I think it's easier to navigate the story since we are looking at it's structure and not for entertainment.</p>
-                    <p>Everything starts in a whirlpool in the sea, hence the cover of the book. The characters are on a small ship with <victim> heading to the 
+                    <p>I have not used names as I think it's easier to navigate the story with roles since we are looking at its structure and not for entertainment.</p>
+                    <p>Everything starts in a whirlpool in the sea, hence the cover of the book. The characters are on a small ship with Victim heading to the
                       city on the coast. During the whirlpool another group of adventurers (goblins?), who read another book of the same type, are summoned on 
-                      the ship. <victim>, <innocent> and his colleagues are on the ship, and the characters are offered to to stay in the <victim>'s mansion. 
-                        They were all summoned because he found this book and wanted to figure it out so cast some spells and activated all the books. <victim> 
-                          introduces <innocent> as his brave but foolish, quick to act apprentice.</p>
-                    <p>The mansion, <victim> explains was built thanks to his father’s successful business of trading rapiers, short swords and daggers. His 
+                      the ship. Victim, Innocent and his colleagues are on the ship, and the characters are offered to to stay in the Victim's mansion.
+                        They were all summoned because he found this book and wanted to figure it out so cast some spells and activated all the books. Victim
+                          introduces Innocent as his brave but foolish, quick to act apprentice.</p>
+                    <p>The mansion, Victim explains was built thanks to his father’s successful business of trading rapiers, short swords and daggers. His
                       father died 6 years ago.</p>
                     <p>Garden:<br>
                         Morning glory - a flower that blooms in the morning because of sunlight and it’s petals are closed when in shadow or darkness; a 
                         letter is hidden under the open petals in the day, but when darkness makes them close it is easy to spot. The letter is written 
-                        with the same handwriting as the book of the <killer>, it is to the girl of the apprentice saying that he will not give up on their 
-                          love. This can be used to have the <killer> try to frame <innocent>.</p>
+                        with the same handwriting as the book of the Killer, it is to the girl of the apprentice saying that he will not give up on their
+                          love. This can be used to have the Killer try to frame Innocent.</p>
                     <p>Time before dinner: the players are invited to do something before it is time for dinner: </p>
                     <ul>
-                      <li>With <killer> and <innocent> to practice spells [openly said] (so all 3 including the PC seem suspicious); <killer> doesn’t want 
-                        to waste mana; The <innocent> calls <killer> by his middle-name. The other players will not know whom this name belongs when they see it.</li>
+                      <li>With Killer and Innocent to practice spells [openly said] (so all 3 including the PC seem suspicious); Killer doesn’t want
+                        to waste mana; The Innocent calls Killer by his middle-name. The other players will not know whom this name belongs when they see it.</li>
                       <li>With sister to show you around: offers a reward a knife from the father’s collection of rare craftsman knives [openly said] (so the 
                         sister and the PC sound suspicious) In private they find that one specific knife is missing from its stand - Lord Kelnor’s pearl dagger</li>
-                      <li>With cook to help prepare the big dinner. [openly said]; In private he tells the motive of both <innocent> and <sister>. He is grumpy 
+                      <li>With cook to help prepare the big dinner. [openly said]; In private he tells the motive of both Innocent and Sister. He is grumpy
                         and very skilled with cutting meat with his knife; he says the sister has a necklace with a gem that allows her to seduce and control weak men</li>
                     </ul>
                     <p>The players are given the information separately through notes and they should get a bit confused and suspect each other.</p>
                     <p>Dining room:<br>
-                        During dinner the characters can talk to <innocent>, <killer>, <victim>’s sister who is a paid assassin, the cook, the old nanny</p>
-                    <p><killer> says he will go and help the cook to set up the table. <innocent> says that he will go and find the host <victim> because 
+                        During dinner the characters can talk to Innocent, Killer, Victim’s sister who is a paid assassin, the cook, the old nanny</p>
+                    <p>Killer says he will go and help the cook to set up the table. Innocent says that he will go and find the host Victim because
                       he should have been here already. He leaves the room and in a bit everyone hears him scream.</p>
-                    <p><victim> is stabbed in the heart in his study. There is no weapon there. Actually the knife <killer> used was conjured by Spiritual weapon.</p>
-                    <p><killer> points the finger at innocent and explains his motive. <innocent> explains that he had the choice to give up on his study, but 
-                      made up his mind and was no longer interested in marrying the girl. <innocent> has a fresh letter to her stating that he will find a way to 
+                    <p>Victim is stabbed in the heart in his study. There is no weapon there. Actually the knife Killer used was conjured by Spiritual weapon.</p>
+                    <p>Killer points the finger at innocent and explains his motive. Innocent explains that he had the choice to give up on his study, but
+                      made up his mind and was no longer interested in marrying the girl. Innocent has a fresh letter to her stating that he will find a way to
                       be with her and won’t give up on their love.</p>
-                    <p>The real killer has to be found before sunrise otherwise the framed <innocent> will be hanged.</p>
-                    <p><innocent> is a young novice, brave but foolish, quick to act. <victim> doesn’t let <innocent> marry the daughter of a blacksmith because 
+                    <p>The real killer has to be found before sunrise otherwise the framed Innocent will be hanged.</p>
+                    <p>Innocent is a young novice, brave but foolish, quick to act. Victim doesn’t let Innocent marry the daughter of a blacksmith because
                       she will distract him from his studies.</p>
                     <p>Cook - not speaking a lot / low voice / bitter</p>
                     <p>The study:<br>
-                        Has a book with spells (belongs to:<killer>’s name on the inside cover), every page has notes in the margins. Some of the notes are 
-                        crossed out and with another color and handwriting more notes are taken. The second notes match the handwriting on the papers on <victim>’s 
-                        desk. On the spell Spiritual weapon there are a lot of scribbles and in all caps: HAVE TO ASK <killer’s middle name> HOW TO CAST THIS!</p>
-                    <p>Trophies on a shelf saying: First place in spellcasting/conjuring/arcana competition - <victim></p>
+                        Has a book with spells (belongs to:Killer’s name on the inside cover), every page has notes in the margins. Some of the notes are
+                        crossed out and with another color and handwriting more notes are taken. The second notes match the handwriting on the papers on Victim’s
+                        desk. On the spell Spiritual weapon there are a lot of scribbles and in all caps: HAVE TO ASK &lt;Killer’s middle name&gt; HOW TO CAST THIS!</p>
+                    <p>Trophies on a shelf saying: First place in spellcasting/conjuring/arcana competition - Victim</p>
                     <p>Building the structure of the mystery:</p>
                         <ul>
-                          <li><innocent> has motive and opportunity(to go bring victim), but no means</li>
-                          <li><killer> has motive(fame,praise), means(stabbing), opportunity(the fact that the apprentice and the sister now have a motive)</li>
+                          <li>Innocent has motive and opportunity(to go bring victim), but no means</li>
+                          <li>Killer has motive(fame,praise), means(stabbing), opportunity(the fact that the apprentice and the sister now have a motive)</li>
                           <li>Cook has means(knife with blood), no motive and no opportunity</li>
                           <li>Sister has motive(she is younger and can inherit the mansion that she likes very much if her brother dies), but no means and no 
                             opportunity, but definitely suspicious being an assassin</li>
@@ -559,7 +560,7 @@
                     </div>
                     <p>A comfortable personalised keyboard.</p>
                   <p>Custom 3D models, simple understandable arduino firmware code, manageable wiring.</p>
-                  <img class="w3-round-large w3-mobile w3-image" src="img/keyboard_finished.jpg">
+                  <img class="w3-round-large w3-mobile w3-image" src="img/projects/keyboard_finished.jpg">
                     <a href="https://github.com/vs-slavchev/keyboard">3D models and code</a>
                 </div>
 
@@ -572,7 +573,7 @@
                     </div>
                     <p>A wooden robot that is an arm on tank tracks. The tracks were 3D printed and the wooden structure is made from glued sticks.
                       A raspberry controls with Python the 4 servos of the arm and the 2 motors for the tracks.</p>
-                    <img class="w3-round-large w3-mobile w3-image" src="img/roboter.jpg">
+                    <img class="w3-round-large w3-mobile w3-image" src="img/projects/roboter.jpg">
                 </div>
                   
                 <div class="article">
@@ -586,7 +587,7 @@
                   <p>A cyberspace game made using LibGDX and Java 8. Fight against the AI overlord of a system gone rogue, navigate your way in barren 
                     artificial landscapes and try to comprehend where reality bleeds into virtuality. Made together with
                     <a href="http://github.com/BozhidarHrusanov">Bozhidar Hrusanov</a>.</p>
-                  <img class="w3-round-large w3-mobile w3-image" src="https://cloud.githubusercontent.com/assets/10689151/16925491/c1e9eb46-4d24-11e6-8fca-f26b0c3bbf92.gif">
+                  <img class="w3-round-large w3-mobile w3-image full-width" src="https://cloud.githubusercontent.com/assets/10689151/16925491/c1e9eb46-4d24-11e6-8fca-f26b0c3bbf92.gif">
                   <p>Download: <a href="https://github.com/vs-slavchev/Virtual-Evil/releases">from github</a></p>
                 </div>
 
@@ -600,7 +601,7 @@
                   <p>Java 2D space invaders game, but with a story twist. Captain Manol, a pirate captain, had his ship fleet sunken after a confrontation with the
                       invading aliens, but managed to get hold of one of their ships. Now his mastery of sailing leads him on a revenge to invade the aliens' space.</p>
                   <p> I wanted to experiment with user experience: animations, notifications and sounds.</p>
-                    <img class="w3-round-large w3-mobile w3-image" src="https://cloud.githubusercontent.com/assets/10689151/16804471/b580b2fe-4914-11e6-8ed6-fc18281d7df2.gif">
+                    <img class="w3-round-large w3-mobile w3-image full-width" src="https://cloud.githubusercontent.com/assets/10689151/16804471/b580b2fe-4914-11e6-8ed6-fc18281d7df2.gif">
                     <p>Download: <a href="https://github.com/vs-slavchev/Invade-yer-space/releases">from github</a></p>
                 </div>
 
@@ -614,7 +615,7 @@
                   <p>A Java 2D asteroids game with spaceships based on rotating around and having to manage your velocity and acceleration.
                     It has 5 different enemies which use different attack strategies, various powerups, fast dangerous asteroids. Made together with
                     <a href="http://github.com/BozhidarHrusanov">Bozhidar Hrusanov</a>.</p>
-                  <img class="w3-round-large w3-mobile w3-image" src="img/sanitys_eclipse.gif">
+                  <img class="w3-round-large w3-mobile w3-image" src="img/projects/sanitys_eclipse.gif">
                   <p>Find it <a href="https://github.com/vs-slavchev/Small_projects/tree/master/Sanity's%20Eclipse">at github</a></p>
                 </div>
 
@@ -758,7 +759,7 @@
                     <p>A 2D game written in 2 days and a half in C++ for game programming competition. The theme of all games was "bubbles".
                       In the game you compete with the evil bubble to collect more bathroom bubbles and become the biggest bubble.
                     </p>
-                    <img class="w3-round-large w3-mobile w3-image" src="img/bubble-rebel.gif">
+                    <img class="w3-round-large w3-mobile w3-image full-width" src="img/projects/bubble-rebel.gif">
                     <p>Download: <a href="https://github.com/vs-slavchev/Small_projects/tree/master/Bubble%20Rebel">from github</a></p>
                   </div>
 
@@ -768,8 +769,8 @@
                       <span>_March_2013</span>
                       <span class="w3-tag w3-round-large w3-center lighter-background">Allegro</span>
                   </div>
-                  <p>Help Yani collect all the cultural relics so he can finaly face his greatest enemy.</p>
-                  <img class="w3-round-large w3-mobile w3-image" src="img/yani_rise.bmp">
+                  <p>Help Yani collect all the cultural relics so he can finally face his greatest enemy.</p>
+                  <img class="w3-round-large w3-mobile w3-image" src="img/projects/yani_rise.bmp">
                   <p>Download: <a href="https://github.com/vs-slavchev/Small_projects/tree/master/Yani%20Rise%20to%20Power">from github</a></p>
                 </div>
 
@@ -793,7 +794,7 @@
                   <p>2D tiled fantasy game written in C++ with Allegro 4. The game has an inventory system, abilities and cooldowns, multi-layer
                     map and map editor, character stats, an enormous map that is visibly chunked, npcs to talk to. It taught me basics of OOP,
                     rendering 2D graphics and using arrays of pointers.</p>
-                  <img class="w3-round-large w3-mobile w3-image" src="img/strength-and-steel.png">
+                  <img class="w3-round-large w3-mobile w3-image" src="img/projects/strength-and-steel.png">
                 </div>
 
                 <div class="article">
@@ -828,7 +829,7 @@
                       <span class="w3-tag w3-round-large w3-center lighter-background">text-based</span>
                   </div>
                   <p>My first C++ game - a text-based fantasy RPG with many different enemies, combat scenarios and outcomes.</p>
-                  <img class="w3-round-large w3-mobile w3-image" src="img/WoV_map.jpg">
+                  <img class="w3-round-large w3-mobile w3-image" src="img/projects/WoV_map.jpg">
                 </div>
 
                 <div class="article">
@@ -842,7 +843,7 @@
                     the bugs. The goal was to have a variety of levels not fitting with eachother and not constrained by story. Most bosses have
                     unique mechanics and theme.
                   </p>
-                  <img class="w3-round-large w3-mobile w3-image" src="img/dtp.png">
+                  <img class="w3-round-large w3-mobile w3-image" src="img/projects/dtp.png">
                   <p>Download: <a href="https://github.com/vs-slavchev/Small_projects/tree/master/DTP">from github</a></p>
                 </div>
 
@@ -857,27 +858,31 @@
                   <h1 class="prompt w3-xxlarge">Tent in Daan Park in Taipei</h1>
                   <p>This tent and table with chair are next to a pond in the middle of the park. The shade keeps you cool and the green surroundings make a 
                     nice place to do some work in a relaxing atmosphere.</p>
-                  <img class="w3-round-large w3-mobile w3-image" src="img/daan_park.jpg">
+                  <img class="w3-round-large w3-mobile w3-image" src="img/places/daan_park.jpg">
+                  <p>25°01'44.3"N 121°32'07.8"E</p>
                 </div>
 
                 <div class="article">
                   <h1 class="prompt w3-xxlarge">Fountain in 2/28 Park in Taipei</h1>
-                  <p>The sprinklers move in tact to a music and lights colour the water in vivid hues. I liked the simple combination of the changing figures 
-                    drawn by the water, the music and the colors.</p>
-                  <img class="w3-round-large w3-mobile w3-image" src="img/228_fountain.jpg">
+                  <p>There is a bench in the little building surrounded by water. The sprinklers move in tact to a music and lights colour the water in vivid hues.
+                    I liked the simple combination of the changing figures drawn by the water, the music and the colors.</p>
+                  <img class="w3-round-large w3-mobile w3-image" src="img/places/228_fountain.jpg">
+                  <p>25°02'31.5"N 121°30'56.9"E</p>
                 </div>
 
                 <div class="article">
                   <h1 class="prompt w3-xxlarge">Rock chair in Montreux</h1>
                   <p>A few of the rocks on the shore of the lake make a surprisingly comfortable chair. It is possible the passing ship makes waves big 
                     enough to reach you and splash you a bit, but that might be exactly what you need on a hot day.</p>
-                  <img class="w3-round-large w3-mobile w3-image" src="img/montreux_rock_chair.jpg">
+                  <img class="w3-round-large w3-mobile w3-image" src="img/places/montreux_rock_chair.jpg">
+                  <p>46°25'48.0"N 6°54'35.3"E</p>
                 </div>
 
                 <div class="article">
                   <h1 class="prompt w3-xxlarge">Bench next to the lake in Eindhoven</h1>
                   <p>Quiet place if you can ignore the quacks of the ducks.</p>
-                  <img class="w3-round-large w3-mobile w3-image" src="img/eindhoven_lake.jpg">
+                  <img class="w3-round-large w3-mobile w3-image" src="img/places/eindhoven_lake.jpg">
+                  <p>51°27'13.9"N 5°29'56.0"E</p>
                 </div>
 
                 <br>

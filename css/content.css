@@ -105,3 +105,7 @@ div.undertitle {
 .article-header {
     margin-bottom: 10px;
 }
+
+img.full-width {
+    width: 100%;
+}
