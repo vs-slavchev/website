@@ -59,5 +59,5 @@ async function run_loading_screen() {
     finish_loading_animation();
 }
 
-run_loading_screen();
-//finish_loading_animation();
+//run_loading_screen();
+finish_loading_animation();

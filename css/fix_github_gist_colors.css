@@ -1,0 +1,27 @@
+span.pl-s1, span.pl-kos, span.pl-smi {
+	color:#00FF66!important;
+}
+
+span.pl-s {
+	color:#73fffe!important;
+}
+
+span.pl-c1 {
+	color:#00b3fe!important;
+}
+
+span.pl-k {
+	color:#de004e!important;
+}
+
+span.pl-en {
+	color:#ff00a0!important;
+}
+
+div.gist-data > div > div > div > table {
+	background-color: #282828 !important;
+}
+
+div.gist-data > div > div > div > table > tbody > tr > td {
+	color:#00FF66!important;
+}

@@ -10,6 +10,7 @@
     <link href="css/content.css" rel="stylesheet">
     <link href="css/flipcard.css" rel="stylesheet">
     <link href="css/scrollbar.css" rel="stylesheet">
+    <link href="css/fix_github_gist_colors.css" rel="stylesheet">
 
     <link href="img/favicon.ico" rel="shortcut icon"/>
     <link href="img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
@@ -49,6 +50,71 @@
           <div id="page_container">
   <!-- blog -->
             <div id="blog" style="display:block;">
+
+              <div class="article">
+                <div class="article-header">
+                  <h1 class="prompt w3-xlarge w3-button w3-left-align w3-mobile" onclick="open_blog_post('animated_svg_post')">Animating SVG with simple JS</h1>
+                  <div class="undertitle">
+                    <span>_21_June_2020</span>
+                    <span class="w3-tag w3-round-large w3-center lighter-background">animation</span>
+                    <span class="w3-tag w3-round-large w3-center lighter-background">website</span>
+                  </div>
+                </div>
+                <div class="w3-hide w3-container w3-animate-opacity" id="animated_svg_post">
+                  <button onclick="startDrawingPath()" class="w3-button w3-round-large w3-border">Click to run animation!</button>
+                  <svg viewBox="0 0 200 50">
+                    <path class="animatable"
+                          d="M 8.1264881,15.974702 14.363095,35.251487 19.087797,15.407738"
+                          style="fill:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
+                    </path>
+                    <path class="animatable"
+                            style="fill:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="M 8.1264881,15.974702 14.363095,35.251487 19.087797,15.407738">
+                    </path>
+                    <path class="animatable"
+                            style="fill:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="M 33.072916,15.974702 C 4.643728,22.543248 49.083918,27.413766 22.300595,34.684522">
+                    </path>
+                    <path class="animatable"
+                            style="fill:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="m 112.05275,16.634265 0.46772,15.835719">
+                    </path>
+                    <path class="animatable"
+                            style="fill:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="m 118.66767,16.7679 c 0,0.334087 0.66817,15.234364 0.66817,15.234364">
+                    </path>
+                    <path class="animatable"
+                            style="fill:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="m 129.75935,16.634265 c -0.26727,0.133635 -7.34991,-0.200452 -7.34991,-0.200452 l 0.93545,15.167546 6.949,-1.469982">
+                    </path>
+                    <path class="animatable"
+                            style="fill:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="m 48.17107,30.998313 c 1.448659,9.593731 17.169091,-1.434365 4.192131,-6.648975 -10.40116,-3.849103 8.310748,-14.4767454 9.402157,-3.526162 0,0 0.522092,12.36668 0.900068,12.36668 0.377977,0 9.874628,0.236236 9.874628,0.236236 l 5.197173,-17.528646 7.276042,15.449777">
+                    </path>
+                    <path class="animatable"
+                            style="fill:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="m 74.477182,26.764261 c 0.614211,-0.141741 11.670014,-7.984747 11.670014,-7.984747 l 5.291666,14.93006 6.142114,-16.300224">
+                    </path>
+                    <path class="animatable"
+                            style="fill:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="m 107.82578,20.139337 c -13.490843,-15.9715525 -10.214265,28.79624 2.70611,6.280834 l 19.92582,-4.525402 5.10987,10.113912 5.14993,-14.93006">
+                    </path>
+                    <path class="animatable"
+                            style="fill:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="M 31.759931,34.553711 H 45.390675">
+                    </path>
+                  </svg>
+                  <p>A nice looking effect can be achieved by gradually drawing a SVG. You can do this for an icon or some text that is made out of paths.
+                  </p>
+                  <p>SVG files are just
+                    XML so you can use a SVG editor to make the paths and open the file with a text editor. When copying the tags to your HTML you should check if the code
+                    is also valid HTML, maybe you need to close the tags or delete some attributes.
+                  </p>
+                  <p>You can fit this to your needs by having it also draw backwards by reducing the <code>length</code> that is overwritten each tick on the <code>strokeDasharray</code>.
+                   You can have this run when the page opens or an element is hovered or a menu text/icon is rendered.</p>
+                  <script src="https://gist.github.com/vs-slavchev/e01db34e1bce9ad3f48a8ab850746d13.js"></script>
+                </div>
+              </div>
 
               <div class="article">
                         <div class="article-header">
@@ -906,4 +972,5 @@
 <script src="js/loading_screen.js"></script>
 <script src="js/w3_sidebar_open_close.js"></script>
 <script src="js/tab_open.js"></script>
+<script src="js/svg_animate.js"></script>
 </html>
