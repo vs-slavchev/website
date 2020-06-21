@@ -6,6 +6,7 @@
 function finish_loading_animation() {
     document.getElementById('loading-screen').style.display = "none";
     document.getElementById('main-loaded-site').style.display = "block";
+    type_title_animation();
 }
 
 function sleep(ms) {
