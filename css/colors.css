@@ -8,9 +8,14 @@
 	color: #00FF66;
 }
 
+.w3-button {
+    transition: all 0.5s ease;
+}
+
 .w3-button:hover {
 	color:#00FF66!important;
 	background-color:#206020!important;
+	transition:none;
 }
 
 .w3-table-all tr:nth-child(odd) {
