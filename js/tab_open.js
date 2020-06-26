@@ -6,6 +6,7 @@ function openPage(divID) {
     }
 
     document.getElementById(divID).style.display = "block";
+    sidebar_close();
 }
 
 function open_blog_post(id) {

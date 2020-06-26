@@ -5,7 +5,7 @@ function type_title_animation() {
   if (i < text_content.length) {
     document.getElementById("title").innerHTML += text_content.charAt(i);
     i++;
-    var delay = 50 + 100 * Math.random(5);
+    var delay = 150 * Math.ceil(Math.random(3));
     setTimeout(type_title_animation, delay);
   }
 }

@@ -1,7 +1,7 @@
-function w3_open() {
+function sidebar_open() {
     document.getElementById("mySidebar").style.display = "block";
 }
   
-function w3_close() {
+function sidebar_close() {
     document.getElementById("mySidebar").style.display = "none";
 }
